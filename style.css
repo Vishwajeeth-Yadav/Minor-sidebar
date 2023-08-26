@@ -1,0 +1,171 @@
+
+*{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.user-im{
+width: 50px;
+border-radius: 100%;
+border: 2px dotted green;
+}
+
+.sidebar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 90px;
+    background-color:#003049;
+    padding: 0.4rem 0.75rem;
+    transition: all 0.5s ease;
+}
+
+.sidebar.active~.main-content{
+    left: 250px;
+    width: calc(100%-250px);
+}
+
+.sidebar.active{
+    width: 250px;
+}
+.sidebar #btn{
+    color: white;
+    position: absolute;
+    top: 6.5px;
+    left: 40%;
+    font-size: 1.2rem;
+    transform: translatex(-50%);
+    cursor: pointer;
+}
+.sidebar.active #btn{
+    left: 90%;
+}
+
+.sidebar .top .logo{
+    color:white;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.sidebar.active .top .logo{
+    opacity: 1;
+}
+.top .logo i{
+    font-size: 1.35rem;
+    margin-right: 2px;
+}
+ 
+.user p{
+    color: white;
+    opacity: 1;
+    margin-left: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.sidebar p{
+    opacity: 0;
+}
+.sidebar.active p{
+    opacity: 1;
+}
+
+.sidebar ul li a{
+    color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+background-color: white;
+color: #003049;
+}
+
+.sidebar.active ul li a:hover{
+    margin-left: 10px;
+}
+
+.sidebar ul li a i{
+    min-width: 30px;
+    margin-left:0.5rem ;
+    text-align: center;
+    height: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+}
+
+.sidebar .nav-items{
+    opacity: 0;
+}
+.sidebar.active .nav-items{
+    opacity: 1;
+}
+
+.sidebar ul li {
+    position: relative;
+}
+
+
+.sidebar ul li .tooltip{
+    position:absolute;
+    left: 125px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0.5rem 0.8rem #003049;
+    border-radius: 0.6rem;
+    padding:0.5rem 0.5rem;
+    line-height: 0.8rem;
+    z-index: 20;
+    opacity: 0;
+    white-space: nowrap;
+}
+
+.sidebar ul li:hover .tooltip{
+    opacity: 1;
+}
+
+.sidebar.active .tooltip{
+    display: none;
+}
+
+.main-content{
+    position: relative;
+    background-color: white;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.5s ease;
+    padding: 1rem;
+    width: calc(100% - 80px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
